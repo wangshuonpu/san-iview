@@ -6,9 +6,9 @@
         <span s-else class="{{linkClasses}}">
             <slot></slot>
         </span>
-        <span 
-            class="{{separatorClasses}}" 
-            s-html="separator" 
+        <span
+            class="{{separatorClasses}}"
+            s-html="separator"
             s-if="!showSeparator">
         </span>
         <span class="{{separatorClasses}}" s-else>
@@ -51,7 +51,7 @@ export default {
     },
     attached() {
         let num = 0;
-        this.slotChilds.forEach(child => {
+        this.slotChilds && this.slotChilds.forEach(child => {
             if (child.name === 'separator') {
                 num++;
             }

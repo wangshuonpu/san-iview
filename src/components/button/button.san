@@ -1,7 +1,7 @@
 <template>
-    <button 
-        type="{{htmlType}}" 
-        class="{{classes}}" 
+    <button
+        type="{{htmlType}}"
+        class="{{classes}}"
         disabled="{{disabled}}"
         on-click="handleClick($event)"
     >
@@ -60,7 +60,7 @@ export default {
         }
     },
     attached() {
-        if (this.slotChilds.length === 0) {
+        if (this.slotChilds && this.slotChilds.length === 0) {
             this.data.set('showSlot', false);
         }
     },
